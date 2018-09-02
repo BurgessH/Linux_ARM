@@ -27,7 +27,19 @@
       - eMMC/iNand/moviNand:
       - oneNAND:
       - SD卡/TF卡、MMC卡:
-      -eSSD:  
-  - PC机：内存需求量大，而且软件复杂，不在乎DRAM的初始化开销，适合全部用DRAM；   
+      - eSSD:  
+      
+  - PC机：很小容量的BIOS（NorFlash）+ 很大容量的硬盘（类似NandFlash）+ 大容量的DRAM；    
+  - 一般单片机：很小容量的Norflash + 很小容量的SRAM；  
+  - 嵌入式系统：因为NorFlash很贵，所以现在很多嵌入式系统倾向于不使用NorFlash，直接外接大容量Nand + Soc内置SRAM + 外接大容量DRAM；
   
-  - 7.S5PV210启动过程:
+  - 7.S5PV210启动过程:  
+    210内置了一块96KB大小的SRAM（叫iRAM）,同时还有一块内置的64KB大小的Norflash(iROM);  
+    大致启动过程：  
+      第一步：CPU上电后先从内部IROM中读取预先设置的代码（BL0）
+
+
+
+
+
+
