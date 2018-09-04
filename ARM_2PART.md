@@ -37,8 +37,14 @@
     210内置了一块96KB大小的SRAM（叫iRAM）,同时还有一块内置的64KB大小的Norflash(iROM);  
     大致启动过程：  
       第一步：CPU上电后先从内部IROM中读取预先设置的代码（BL0）
-
-
+  - 8 ARM处理器工作模式  
+    - User
+    - FIQ  
+    - IRQ  
+    - Supervisor  
+    - Abort  
+    - System 
+    
 
 
 
