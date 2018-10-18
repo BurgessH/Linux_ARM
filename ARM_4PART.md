@@ -7,6 +7,8 @@
     - 把OM5打到GND，已从SD通道启动，从SD启动时会先从iNand（SD0）启动执行，当iNand启动做校验和失败时才会转为启动SD2。而我们做裸机实验时是通过SD2提供裸机程序镜像的，因此需要先破坏内部iNand的uboot才可以强迫开发板从SD2启动去执行我们的裸机程序。
     
   - 3.自己动手安装交叉编译工具链
-    - 
+    - 1.工具链的选择：A盘/Tools/arm-linux-q3;  
+    - 2.文件存放位置：通过共享文件的方式将文件复制到usr/local/arm/(注意根目录下的bin(系统中用户使用的程序)/sbin（系统管理自带的程序）)解压，tar -jxvf xx      
+    - 验证：在安装的路径下：arm-none-linux-gnueabi-gcc -v  
   - 4. Makefile
   - 
