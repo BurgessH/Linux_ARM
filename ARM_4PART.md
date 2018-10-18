@@ -10,5 +10,5 @@
     - 1.工具链的选择：A盘/Tools/arm-linux-q3;  
     - 2.文件存放位置：通过共享文件的方式将文件复制到usr/local/arm/(注意根目录下的bin(系统中用户使用的程序)/sbin（系统管理自带的程序）)解压，tar -jxvf xx      
     - 验证：在安装的路径下：arm-none-linux-gnueabi-gcc -v  
-  - 4. Makefile
+  - 4.Makefile
   - 
